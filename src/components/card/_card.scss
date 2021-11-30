@@ -1,0 +1,26 @@
+@import "../assets/variabless";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.cardWrapper {
+    background-color: $backgroundColor;
+    border: 3px solid $borderColor;
+    height: 40vh;
+    width: 20vh;
+    border-radius: 1.5rem;
+    position: absolute;
+
+}
+
+.cardWrapper div {
+    margin-top: 1rem;
+}
+
+.cardWrapper button {
+    color: white;
+    background-color: rgb(240, 128, 128);
+    border-radius: 1.5rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    margin-top: 3rem;
+    width: 7rem;
+    height: 2.5rem;
+}

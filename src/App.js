@@ -1,25 +1,35 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Card from './components/card/card';
+import Table from './components/table/table';
+import words from './components/assets/Words';
+import Header from './components/header/header';
+import ButtonUp from './components/buttonUp/ButtonUp'
+import ButtonDown from './components/buttonDown/ButtonDown';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"> 
+    <Header></Header>
+    <div  className="App1" >
+      
+     <ButtonDown></ButtonDown>
+    {
+      words.map (  (word) =>
+      <Card english={word.english}  transcription={word.transcription} russian={word.russian} tags={word.tags} > </Card>
+        )
+      
+    }
+  <ButtonUp></ButtonUp>
+   </div>
+   <div  className="App2" >
+    <Table></Table>
     </div>
+    </div>
+  
   );
+  
 }
 
 export default App;
