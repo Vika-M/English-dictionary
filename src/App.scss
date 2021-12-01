@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+@import "./components/assets/variabless";
 
 .App {
   text-align: center;
@@ -10,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 3rem;
 
 
 }
@@ -20,7 +21,28 @@
 
 .App2 {
 
-  margin-top: 10rem;
+  margin-top: 3rem;
+}
+
+
+.btnUp {
+  background-color: $borderColor;
+  margin-left: 1.3rem;
+  color: white;
+  border-radius: 1.5em;
+  width: 5rem;
+  height: 2rem;
+}
+
+
+.btnDown {
+  background-color: $borderColor;
+  color: white;
+  border-radius: 1.5em;
+  width: 5rem;
+  height: 2rem;
+  margin-right: 1.3rem;
+
 }
 
 .App-logo {
