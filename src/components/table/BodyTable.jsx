@@ -1,4 +1,4 @@
-
+import "./_table.scss"
 
 
 function BodyTable(props) {
@@ -6,7 +6,7 @@ function BodyTable(props) {
     return (
         <div>
 
-            <tr>
+            <tr className='table-rows' >
                 <td>{english}</td>
                 <td>{transcription}</td>
                 <td>{russian}</td>

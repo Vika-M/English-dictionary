@@ -5,6 +5,12 @@ import Table from './components/table/table';
 import words from './components/assets/Words';
 import Header from './components/header/header';
 import { useState } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'; 
 
 
 
@@ -25,6 +31,7 @@ const sliderLeft = () => {
 
 
   return (
+    <BrowserRouter>
     <div className="App"> 
     <Header></Header>
     <div  className="App1" >
@@ -48,9 +55,19 @@ const sliderLeft = () => {
    <div>{indexArray+1 + '/' + words.length}</div>
    <div  className="App2" >
     <Table></Table>
+    <main>
+    <Switch>
+      <Route path='/card' >
+        <Card></Card>
+      </Route>
+      <Route path='/table' >
+      <Table></Table>
+      </Route>
+    </Switch>
+    </main>
     </div>
     </div>
-  
+    </BrowserRouter>
   );
   
 }

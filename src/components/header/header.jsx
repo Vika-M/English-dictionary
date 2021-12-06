@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./_header.scss"
 
 function Header() {
@@ -7,8 +8,8 @@ function Header() {
 
 
             <div className="menu"  >
-                <div> <a href="#" >Карточки</a></div>
-                <div> <a href="#" >Таблица</a></div>
+                <div> <Link to='/card'>  Карточки</Link></div>
+                <div> <Link to='/table'>  Таблица</Link></div>
             </div>
 
         </header>

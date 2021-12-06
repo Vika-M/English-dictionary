@@ -1,7 +1,7 @@
 import BodyTable from "./BodyTable";
 import HeadTable from "./HeadeTable";
 import words from "../assets/Words";
-import "./_table.scss"
+import "./_table.scss";
 
 
 
