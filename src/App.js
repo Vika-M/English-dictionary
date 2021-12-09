@@ -7,11 +7,10 @@ import Header from './components/header/header';
 import { useState } from 'react';
 import {
   BrowserRouter,
-  Switch,
+  Routes,
   Route,
   Link
 } from 'react-router-dom'; 
-
 
 
 function App() {
@@ -29,44 +28,41 @@ const sliderLeft = () => {
      
 } ;
 
-
   return (
     <BrowserRouter>
     <div className="App"> 
     <Header></Header>
     <div  className="App1" >
-      
-  
-    <div>
-        <button className="btnDown"  onClick={sliderLeft}  >Назад</button>
-    </div>
-        
-      <Card english={words[indexArray].english}  transcription={words[indexArray].transcription} russian={words[indexArray].russian} tags={words[indexArray].tags} > </Card>
-        
       <div>
-         <button className="btnUp" onClick={sliderRight} >Вперед</button>
-       </div>
+          <button className="btnDown"  onClick={sliderLeft}  >Назад</button>
+      </div>
+          
+        <Card english={words[indexArray].english}  transcription={words[indexArray].transcription} russian={words[indexArray].russian} tags={words[indexArray].tags} > </Card>
+          
+        <div>
+           <button className="btnUp" onClick={sliderRight} >Вперед</button>
+         </div>
+     </div>
+     <div>{indexArray+1 + '/' + words.length}</div> 
+     <div  className="App2" >
+          <Table></Table>
+         </div>
 
-       
-    
-
-  
-   </div>
-   <div>{indexArray+1 + '/' + words.length}</div>
-   <div  className="App2" >
-    <Table></Table>
     <main>
-    <Switch>
-      <Route path='/card' >
-        <Card></Card>
+    <Routes>
+      <Route path='/card' element={<Card></Card>}>
       </Route>
-      <Route path='/table' >
-      <Table></Table>
+      <Route path='/table' element={<Table></Table>} >
+        
       </Route>
-    </Switch>
+      <Route path='/'>Главная страница</Route>
+      <Route>
+       Ошибка 404 страница не найдена
+      </Route>
+    </Routes>
     </main>
     </div>
-    </div>
+    
     </BrowserRouter>
   );
   
