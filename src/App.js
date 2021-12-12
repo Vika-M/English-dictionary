@@ -4,6 +4,7 @@ import Card from './components/card/card';
 import Table from './components/table/table';
 import words from './components/assets/Words';
 import Header from './components/header/header';
+import CardWrapper from './components/card/CardWrapper';
 import { useState } from 'react';
 import {
   BrowserRouter,
@@ -11,53 +12,26 @@ import {
   Route,
   Link
 } from 'react-router-dom'; 
+import Error from './components/Error';
 
 
 function App() {
- const [indexArray, setindexArray] = useState(0);
-
-const sliderRight = () => {
-  if (indexArray < words.length -1 ) {
-    setindexArray(indexArray+1)
-} 
-};
-const sliderLeft = () => {
-   if (indexArray > 0 ) {
-    setindexArray(indexArray-1)
-  }
-     
-} ;
+ 
 
   return (
     <BrowserRouter>
     <div className="App"> 
     <Header></Header>
-    <div  className="App1" >
-      <div>
-          <button className="btnDown"  onClick={sliderLeft}  >Назад</button>
-      </div>
-          
-        <Card english={words[indexArray].english}  transcription={words[indexArray].transcription} russian={words[indexArray].russian} tags={words[indexArray].tags} > </Card>
-          
-        <div>
-           <button className="btnUp" onClick={sliderRight} >Вперед</button>
-         </div>
-     </div>
-     <div>{indexArray+1 + '/' + words.length}</div> 
-     <div  className="App2" >
-          <Table></Table>
-         </div>
-
     <main>
     <Routes>
-      <Route path='/card' element={<Card></Card>}>
+      <Route exact path='/card' element={<CardWrapper></CardWrapper>}>
       </Route>
-      <Route path='/table' element={<Table></Table>} >
+      <Route exact path='/table' element={<Table></Table>} >
         
       </Route>
       <Route path='/'>Главная страница</Route>
-      <Route>
-       Ошибка 404 страница не найдена
+      <Route path="*"  element={<Error/>} >
+      
       </Route>
     </Routes>
     </main>

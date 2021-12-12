@@ -4,7 +4,7 @@ import "./_header.scss"
 function Header() {
     return (
         <header className="header" >
-            <div className="logo" ><h1>Изучаем английский язык легко </h1></div>
+            <div className="logo" ><Link to='/' >Изучаем английский язык легко </Link></div>
 
 
             <div className="menu"  >

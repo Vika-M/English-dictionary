@@ -6,7 +6,7 @@ function BodyTable(props) {
     return (
         <div>
 
-            <tr className='table-rows' >
+            <tr className='table-rows'>
                 <td>{english}</td>
                 <td>{transcription}</td>
                 <td>{russian}</td>
