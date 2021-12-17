@@ -10,12 +10,12 @@ function Card(props) {
     const handleChange = () => {
         setPressed(!pressed);
     }
-
-
+    
+   
     const { english, transcription, russian, tags } = props;
     return (<React.Fragment>
 
-
+           
 
         <div div className="cardWrapper" >
 
@@ -23,7 +23,7 @@ function Card(props) {
             <div className="cardTranscription">{transcription}</div>
 
             <div className="cardTags">{tags}</div>
-            <button onClick={handleChange} className="cardButton">{pressed ? [russian] : 'Проверить'}</button>
+            <button onClick={handleChange} onClick={props.heandler} className="cardButton">{pressed ? [russian] : 'Проверить'}</button>
 
         </div >
 

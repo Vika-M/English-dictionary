@@ -1,7 +1,7 @@
 @import "../assets/variabless";
 
 .table {
-    border: 1px solid $borderColor;
+    border: 1px solid red;
     background-color: $backgroundColor;
     width: 100%;
     padding: 0 2rem;
@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        border: 1px solid;
+        border-top: 1px solid;
     }
 
 }
