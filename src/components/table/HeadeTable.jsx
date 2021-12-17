@@ -8,12 +8,12 @@ function HeadTable() {
         
 
             <thead>
-                
+                <tr>
                 <th>Слово</th>
                 <th>Транскрипция</th>
                 <th>Перевод</th>
                 <th>Группа</th>
-               
+                </tr>
             </thead>
         
     )
