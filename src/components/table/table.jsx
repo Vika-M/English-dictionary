@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function Table(props) {
 
-    const { english, transcription, russian, tags } = props;
+    const { english, transcription, russian, tags } = props; // эта строка уже не нужна?
     const [newArr, setNewArr] = useState(words);
    const  updateNewArray = (newArray) => {
     setNewArr(newArray)

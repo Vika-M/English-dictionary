@@ -1,10 +1,10 @@
 @import "../assets/variabless";
 
 .table {
-    border: 1px solid red;
+    
     background-color: $backgroundColor;
     width: 100%;
-    padding: 0 2rem;
+    padding:  2rem;
     text-align: left;
 }
 
@@ -19,6 +19,6 @@
 
 }
 
-.table-rows {
+/*.table-rows {
     border-top: 1px solid;
-}
+}*/
