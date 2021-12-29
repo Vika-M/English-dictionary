@@ -7,9 +7,12 @@ import '../assets/Words';
 
 function Card(props) {
     const [pressed, setPressed] = useState(false);
+    
+
     const handleChange = () => {
         setPressed(!pressed);
     }
+    
     
    
     const { english, transcription, russian, tags } = props;
