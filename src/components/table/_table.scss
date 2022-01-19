@@ -1,22 +1,20 @@
 @import "../assets/variabless";
 
 .table {
-    
-    background-color: $backgroundColor;
-    width: 100%;
-    padding:  2rem;
-    text-align: left;
+  background-color: $backgroundColor;
+  width: 100%;
+  padding: 2rem;
+  text-align: left;
 }
 
 .tbody {
-    tr {
-       /* display: flex;
+  tr {
+    /* display: flex;
         align-items: center;
         justify-content: space-around;
         text-align: left;*/
-        border-top: 1px solid;
-    }
-
+    border-top: 1px solid;
+  }
 }
 
 /*.table-rows {
